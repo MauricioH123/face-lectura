@@ -51,6 +51,10 @@
         </div>
     </div>
 
+    <div class="w3-container">
+        @yield('contenido')
+    </div>
+
     <div class="w3-main w3-content w3-padding" id="footer">
         <hr>
         <footer class="w3-row-padding w3-padding-32">
@@ -66,7 +70,7 @@
     </div>
 
 
-    
+
     <script>
         function openMenu() {
             document.getElementById("mySidebar").style.display = "block";
