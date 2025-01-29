@@ -48,11 +48,25 @@
             <div class="w3-center w3-padding-16">
                 El Cafe Virtual
             </div>
-
         </div>
-
     </div>
 
+    <div class="w3-main w3-content w3-padding" id="footer">
+        <hr>
+        <footer class="w3-row-padding w3-padding-32">
+            <div class="w3-half">
+                <h3>Pie de pagina</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio at corrupti labore molestiae minima rerum cum quibusdam inventore explicabo, veritatis culpa dolorum tempora autem animi suscipit repellendus corporis harum iusto!</p>
+            </div>
+            <div class="w3-half">
+                <h3>Pie de paginas</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum soluta dolore placeat deleniti illo perferendis voluptate enim explicabo consequatur suscipit assumenda obcaecati ex corporis dicta tenetur quas fugiat, non vero!</p>
+            </div>
+        </footer>
+    </div>
+
+
+    
     <script>
         function openMenu() {
             document.getElementById("mySidebar").style.display = "block";
