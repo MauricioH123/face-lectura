@@ -31,15 +31,15 @@
         </div>
     </div>
     <nav class="w3-sidebar w3-bar-block w3-card w3-large w3-top w3-animate-left" id="mySidebar">
-        <a href="" onclick="closeMenu()" class="w3-button" id="closeMenu">×</a>
-        <a href="#" class="w3-bar-item w3-button"></a>
-        <a href="#" class="w3-bar-item w3-button"></a>
-        <a href="#" class="w3-bar-item w3-button"></a>
+        <a href="" onclick="closeMenu()" class="w3-button" id="closeMenu"><i class="fas fa-times"></i></a>
+        <a href="#" onclick="closeMenu()" class="w3-bar-item w3-button">Libros</a>
+        <a href="#" onclick="closeMenu()" class="w3-bar-item w3-button">Articulos</a>
+        <a href="#" onclick="closeMenu()" class="w3-bar-item w3-button">Mi cuenta</a>
     </nav>
 
     <div class="w3-top" id="topBar">
         <div class="w3-white w3-xlarge" id="topBarContainer">
-            <div class="w3-button w3-padding-16 w3-left" onclick="abrirMenu()">
+            <div class="w3-button w3-padding-16 w3-left" onclick="openMenu()">
                 <i class="fas fa-bars"></i>
             </div>
             <div class="w3-right w3-padding-16">
