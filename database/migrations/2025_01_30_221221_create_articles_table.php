@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('genre_id');
             $table->integer('clasification_id');
             $table->string('image');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

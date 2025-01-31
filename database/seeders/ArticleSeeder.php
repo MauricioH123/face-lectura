@@ -14,7 +14,8 @@ class ArticleSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table("articles")->insert([
+        for ($i = 0; $i < 6; $i++) {
+                    DB::table("articles")->insert([
             'title'=> Str::random(10),
             'author'=>Str::random(10),
             'description'=>Str::random(100),
@@ -25,6 +26,8 @@ class ArticleSeeder extends Seeder
             'genre_id'=> 1,
             'clasification_id'=> 1,
         ]);
+        }
+
         //
     }
 }
