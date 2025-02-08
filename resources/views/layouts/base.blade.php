@@ -34,7 +34,10 @@
         <a href="" onclick="closeMenu()" class="w3-button" id="closeMenu"><i class="fas fa-times"></i></a>
         <a href="#" onclick="closeMenu()" class="w3-bar-item w3-button">Libros</a>
         <a href="#" onclick="closeMenu()" class="w3-bar-item w3-button">Articulos</a>
-        <a href="#" onclick="closeMenu()" class="w3-bar-item w3-button">Mi cuenta</a>
+        <a href="{{url('/login')}}" onclick="closeMenu()" class="w3-bar-item w3-button">Mi cuenta</a>
+        @auth
+        <a href="{{url('/logout')}}" onclick="closeMenu()" class="w3-bar-item w3-button">Cerrar Sesion</a>
+        @endauth
     </nav>
 
     <div class="w3-top" id="topBar">
