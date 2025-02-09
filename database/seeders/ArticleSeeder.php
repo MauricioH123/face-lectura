@@ -14,20 +14,18 @@ class ArticleSeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 0; $i < 6; $i++) {
-                    DB::table("articles")->insert([
-            'title'=> Str::random(10),
-            'author'=>Str::random(10),
-            'description'=>Str::random(100),
-            'content'=> Str::random(1000),
-            'pdf'=> Str::random(100).".pdf",
-            'image'=> Str::random(100).".png",
-            'pages'=> 100,
-            'genre_id'=> 1,
-            'clasification_id'=> 1,
-        ]);
+        for ($i = 0; $i < 10; $i++) {
+            DB::table("articles")->insert([
+                'title'=> Str::random(10),
+                'author'=>Str::random(10),
+                'description'=>Str::random(100),
+                'content'=> Str::random(1000),
+                'pdf'=> Str::random(100).".pdf",
+                'image'=> Str::random(100).".png",
+                'pages'=> 100,
+                'genre_id'=> 1,
+                'clasification_id'=> 1,
+            ]);
         }
-
-        //
     }
 }
