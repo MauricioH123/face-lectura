@@ -14,17 +14,28 @@
                 <h2>Registro</h2>
                 @csrf
                 <label for="email">Nombre</label>
-                <input type="text" class="w3-input w3-border" name="name" placeholder="Ingrese su nombre" required>
+                <input type="text" class="w3-input w3-border" name="name" placeholder="Ingrese su nombre" required value="{{ old('name') }}">
+                @error('name')
+                <span style="color:red;">{{ $message }}</span>
+                @enderror
                 <br>
+
                 <label for="email">Correo electronico</label>
-                <input type="email" class="w3-input w3-border" name="email" placeholder="Ingrese su email" required>
+                <input type="email" class="w3-input w3-border" name="email" placeholder="Ingrese su email" required value="{{ old('email') }}">
+                @error('email')
+                <span style="color:red;">{{ $message }}</span>
+                @enderror
                 <br>
+
                 <label for="password">Contraseña (minimo 8 caracteres)</label>
                 <input type="password" class="w3-input w3-border" minlength="8" name="password" placeholder="Ingrese su contraseña" required>
-
+                @error('password')
+                <span style="color:red;">{{ $message }}</span>
+                @enderror
                 <br>
+
                 <label for="password">Repetir Contraseña</label>
-                <input type="password" class="w3-input w3-border" name="Rpassword" required>
+                <input type="password" class="w3-input w3-border" name="password_confirmation" required>
                 <br>
                 
                 <button type="submit" class="w3-button w3-black w3-round.small">Ingresar</button>
