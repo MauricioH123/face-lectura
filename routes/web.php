@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EliminarRecursosController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -35,6 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin-libros', [DashboardController::class, 'getLibros']);
     Route::get('/admin-articulos', [DashboardController::class, 'getArticulos']);
     Route::get('/admin-obras', [DashboardController::class, 'todasLasObras']);
+    Route::delete('/eliminar-libro', [EliminarRecursosController::class, 'eliminarLibros']);
 });
 
 require __DIR__.'/auth.php';

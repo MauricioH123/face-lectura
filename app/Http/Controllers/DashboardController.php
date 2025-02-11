@@ -32,7 +32,7 @@ class DashboardController extends Controller
         if($user -> role_id != 1){
             return redirect('/');
         }
-        $articulos = Article::where('clasification_id', 2)->get();
+        $articulos = Article::where('clasification_id', 1)->get();
         return view('admin.libros', compact('articulos'));
     }
 
@@ -42,7 +42,7 @@ class DashboardController extends Controller
             return redirect('/');
         }
 
-        $articulos = Article::where('clasification_id', 1)->get();
+        $articulos = Article::where('clasification_id', 2)->get();
         return view('admin.articulos', compact('articulos'));
     }
 
