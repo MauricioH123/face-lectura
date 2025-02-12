@@ -26,6 +26,9 @@
                     <label for="title" class="w3-text-gray"><b>Título</b></label>
                     <input class="w3-input w3-border w3-round w3-margin-bottom" type="text" name="title" placeholder="Ingrese el título" required>
 
+                    <label for="author">Autor</label>
+                    <input class="w3-input w3-border w3-round w3-margin-bottom" type="text" name="author" placeholder="Ingresar el autor" required>
+
                     <label for="pages" class="w3-text-gray"><b>Páginas</b></label>
                     <input class="w3-input w3-border w3-round w3-margin-bottom" type="text" name="pages" placeholder="Ingrese el número de páginas" required>
 
@@ -89,7 +92,7 @@
                         <td class="px-4 py-2">{{ $articulo->clasification->name }}</td>
                         <td class="px-4 py-2">{{ $articulo->author }}</td>
                         <td class="px-4 py-2">
-                            <img src="{{ $articulo->image }}" alt="Imagen" class="w-16 h-16 object-cover rounded-md border">
+                            {{ $articulo->image }}
                         </td>
                         <td class="px-4 py-2">{{ $articulo->pages }}</td>
                         <td class="px-4 py-2 text-center">
