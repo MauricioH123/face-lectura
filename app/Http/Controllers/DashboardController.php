@@ -46,6 +46,18 @@ class DashboardController extends Controller
         return view('admin.articulos', compact('articulos'));
     }
 
+    public function librosEliminados(){
+        $user = Auth::user();
+
+        if($user->role_id != 1){
+            return redirect('/');
+        } 
+
+        $articulos = Article::onlyTrashed()->get();
+        return view('admin.libros-eliminados', compact('articulos'));
+    }
+
+
     
 
 }

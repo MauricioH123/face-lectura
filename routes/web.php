@@ -37,6 +37,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin-articulos', [DashboardController::class, 'getArticulos']);
     Route::get('/admin-obras', [DashboardController::class, 'todasLasObras']);
     Route::delete('/eliminar-libro', [EliminarRecursosController::class, 'eliminarLibros']);
+    Route::get('/libros-eliminados', [DashboardController::class, 'librosEliminados']);
+    Route::post('/restaurar-libro', [EliminarRecursosController::class, 'restaurarLibro']);
 });
 
 require __DIR__.'/auth.php';

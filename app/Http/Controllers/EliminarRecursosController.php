@@ -14,5 +14,12 @@ class EliminarRecursosController extends Controller
         return redirect('/admin-libros');
     }
     
+    public function restaurarLibros(Request $request){
+        $idArticulo = $request->id;
+        $articulo = Article::withTrashed()
+        ->where('id', $idArticulo)->first();
+        $articulo->restore();
+        return redirect('/admin-libros');
+    }
 
 }
