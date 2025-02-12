@@ -11,6 +11,7 @@
     <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%;">
         <h3 class="w3-bar-item">Panel de administracion</h3>
         <a href="{{url('/admin-libros')}}" class="w3-bar-item w3-button">Libros</a>
+        <a href="{{url('/admin-libros-eliminados')}}" class="w3-bar-item w3-button">Restaurar Libros</a>
         <a href="{{url('/admin-articulos')}}" class="w3-bar-item w3-button">Articulo</a>
         <a href="{{url('/nueva-obra')}}" class="w3-bar-item w3-button">Nueva Obra</a>
         <a href="{{url('/admin-generos')}}" class="w3-bar-item w3-button">Generos</a>

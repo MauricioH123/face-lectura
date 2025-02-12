@@ -20,7 +20,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'home']);
 
-Route::get('/dashboard', function () {
+Route::get('/home', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -37,8 +37,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin-articulos', [DashboardController::class, 'getArticulos']);
     Route::get('/admin-obras', [DashboardController::class, 'todasLasObras']);
     Route::delete('/eliminar-libro', [EliminarRecursosController::class, 'eliminarLibros']);
-    Route::get('/libros-eliminados', [DashboardController::class, 'librosEliminados']);
-    Route::post('/restaurar-libro', [EliminarRecursosController::class, 'restaurarLibro']);
+    Route::get('/admin-libros-eliminados', [DashboardController::class, 'librosEliminados']);
+    Route::post('/restaurar-libros', [EliminarRecursosController::class, 'restaurarLibros']);
 });
 
 require __DIR__.'/auth.php';
