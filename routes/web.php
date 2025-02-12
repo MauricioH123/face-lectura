@@ -39,6 +39,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/eliminar-libro', [EliminarRecursosController::class, 'eliminarLibros']);
     Route::get('/admin-libros-eliminados', [DashboardController::class, 'librosEliminados']);
     Route::post('/restaurar-libros', [EliminarRecursosController::class, 'restaurarLibros']);
+    Route::post('/nuevoLibro',[DashboardController::class, 'nuevoLibro']);
 });
 
 require __DIR__.'/auth.php';

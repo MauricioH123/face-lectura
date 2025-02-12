@@ -33,7 +33,7 @@
         <div class="w3-row-padding w3-padding-16 w3-center">
             @foreach ($articles as $article)
             <div class="w3-quarter">
-                <img src="" alt="" class="preview">
+                <img src="{{ url('storage/'.$article->image) }}" alt="" class="preview">
                 <h3>{{$article->title}}</h3>
                 <p class="word-break">{{$article->description}}</p>
             </div>
