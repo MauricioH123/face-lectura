@@ -46,9 +46,6 @@
             <div class="w3-button w3-padding-16 w3-left" onclick="openMenu()">
                 <i class="fas fa-bars"></i>
             </div>
-            <div class="w3-right w3-padding-16">
-                Busqueda
-            </div>
             <div class="w3-center w3-padding-16">
                 El Cafe Virtual
             </div>

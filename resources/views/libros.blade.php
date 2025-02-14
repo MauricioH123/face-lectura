@@ -5,6 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libros</title>
+    <style>
+        .preview{
+            width: 100%;
+            height: 300px;
+        }
+
+        #contenido{
+            margin-top: 5%;
+        }
+
+        .w-5{
+            width: 10%;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        .w3-display-topmiddle{
+            text-align: center;
+        }
+
+        .w3-quarter{
+            margin-bottom: 2%;
+        }
+    </style>
 </head>
 
 <body>
