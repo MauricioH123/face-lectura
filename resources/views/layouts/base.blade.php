@@ -32,8 +32,9 @@
     </div>
     <nav class="w3-sidebar w3-bar-block w3-card w3-large w3-top w3-animate-left" id="mySidebar">
         <a href="" onclick="closeMenu()" class="w3-button" id="closeMenu"><i class="fas fa-times"></i></a>
-        <a href="#" onclick="closeMenu()" class="w3-bar-item w3-button">Libros</a>
-        <a href="#" onclick="closeMenu()" class="w3-bar-item w3-button">Articulos</a>
+        <a href="{{ url('/libros')}}" onclick="closeMenu()" class="w3-bar-item w3-button">Libros</a>
+        <a href="{{ url('/articulos') }}" onclick="closeMenu()" class="w3-bar-item w3-button">Articulos</a>
+        <a href="{{ url('/generos') }}" onclick="closeMenu()" class="w3-bar-item w3-button">Generos</a>
         <a href="{{url('/login')}}" onclick="closeMenu()" class="w3-bar-item w3-button">Mi cuenta</a>
         @auth
         <a href="{{url('/logout')}}" onclick="closeMenu()" class="w3-bar-item w3-button">Cerrar Sesion</a>

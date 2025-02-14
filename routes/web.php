@@ -5,6 +5,8 @@ use App\Http\Controllers\EliminarRecursosController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ArticulosController;
+use App\Http\Controllers\LibrosController;
 
 
 /*
@@ -28,6 +30,11 @@ Route::group(['Middleware'=>'auth'], function(){
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])
     ->name('dashboard');
 });
+
+Route::get('/libros',[LibrosController::class, 'libros']);
+Route::get('/articulos',[ArticulosController::class, 'articulos']);
+Route::get('/articulos/{id}',[ArticulosController::class, 'articulos']);
+Route::get('/generos',[HomeController::class, 'generos']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
