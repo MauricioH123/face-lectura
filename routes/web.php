@@ -33,8 +33,9 @@ Route::group(['Middleware'=>'auth'], function(){
 
 Route::get('/libros',[LibrosController::class, 'libros']);
 Route::get('/articulos',[ArticulosController::class, 'articulos']);
-Route::get('/articulos/{id}',[ArticulosController::class, 'articulos']);
+Route::get('/articulo/{id}',[HomeController::class, 'articulo']);
 Route::get('/generos',[HomeController::class, 'generos']);
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
