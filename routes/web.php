@@ -36,6 +36,7 @@ Route::get('/libros',[LibrosController::class, 'libros']);
 Route::get('/articulos',[ArticulosController::class, 'articulos']);
 Route::get('/articulo/{id}',[HomeController::class, 'articulo']);
 Route::get('/generos', [GenerosController::class, 'generosLista']);
+Route::get('/genero/{id}', [GenerosController::class, 'genero']);
 
 
 Route::middleware('auth')->group(function () {

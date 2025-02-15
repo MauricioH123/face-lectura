@@ -62,17 +62,6 @@
         </div>
     </div>
 
-    <div class="w3-display-container">
-        <div class="w3-row">
-            <div class="w3-third w3-display-topmiddle">
-                {{ $articles->links() }}
-            </div>
-        </div>
-    </div>
-    <a href="{{ url('/articulo'.$article->id) }}">
-        <h3>{{ $article->title }}</h3>
-    </a>
-
     @endsection
 
 </body>

@@ -24,7 +24,7 @@
             </tr>
             @foreach ($generos as $genero)
             <tr>
-                <td>{{ $genero->name }}</td>
+                <td><a href="{{ url('/genero/'.$genero->id) }}">{{ $genero->name }}</a></td>
                 <td>{{ $genero->description }}</td>
             </tr>
             @endforeach
