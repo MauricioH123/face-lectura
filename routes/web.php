@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticulosController;
+use App\Http\Controllers\GenerosController;
 use App\Http\Controllers\LibrosController;
 
 
@@ -34,7 +35,7 @@ Route::group(['Middleware'=>'auth'], function(){
 Route::get('/libros',[LibrosController::class, 'libros']);
 Route::get('/articulos',[ArticulosController::class, 'articulos']);
 Route::get('/articulo/{id}',[HomeController::class, 'articulo']);
-Route::get('/generos',[HomeController::class, 'generos']);
+Route::get('/generos', [GenerosController::class, 'generosLista']);
 
 
 Route::middleware('auth')->group(function () {

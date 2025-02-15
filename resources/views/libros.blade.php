@@ -37,7 +37,7 @@
     @extends('layouts.base')
     @section('contenido')
     <div class="w3-row">
-        <div class="w3-center w3-padding-16">
+        <div class="w3-center w3-padding-16 w3-margin-top">
             <h4>Libros</h4>
         </div>
     </div>
