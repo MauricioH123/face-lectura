@@ -88,6 +88,12 @@ class DashboardController extends Controller
 
     }
 
+    public function articulosAdmind(){
+        $user = Auth::user();
+        $articles = Article::where('clasification_id', 2)->orderBy('id', 'desc')->paginate(8);
+        return view('admin-articulos',['articles' => $articles, 'user'=>$user]);
+    }
+
     
 
 }
